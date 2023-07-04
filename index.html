@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FLATDANGO</title>
+  <style>
+    #greeting {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>WELCOME TO FLATDANGO</h1>
+  
+
+  <label for="name">Put in your name:</label>
+  <input type="text" id="name" />
+  <button id="greetBtn">Greet</button>
+
+  <p id="greeting"></p>
+
+  <script>
+    // Get the important elements from the DOM
+    const nameInput = document.getElementById('name');
+    const greetBtn = document.getElementById('greetBtn');
+    const greetingDisplay = document.getElementById('greeting');
+
+    // Function to handle the button click event
+    function greet() {
+      const name = nameInput.value;
+      greetingDisplay.textContent = `Hello, ${name}!`;
+    }
+
+    // Attach the click event listener to the button
+    greetBtn.addEventListener('click', greet);
+  </script>
+</body>
+</html>
